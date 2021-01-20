@@ -1,21 +1,40 @@
 CAN BUS BOOT LOADER を目標として　情報を集める
 
 
-他社参考文献
-TI社
+各社参考文献
+///////////////////////////////////////////
+●TI社
 SPNA241–August 2019
 CAN Bus Bootloader for Hercules™ Microcontrollers
 
 
+通信量を減らす工夫
+●CAN経由でverify するのではなく　ローカル　でVerify して通信を半分にするアイディア
 
-マイクロチップ社
+
+
+
+
+
+
+
+
+●マイクロチップ社
 
 MPLAB® Harmony 3 Bootloader Module
 
 
 
-通信量を減らす工夫
-●CAN経由でverify するのではなく　ローカル　でVerify して通信を半分にするアイディア
+●ST社
+
+
+
+
+
+
+
+
+
 
 
 
