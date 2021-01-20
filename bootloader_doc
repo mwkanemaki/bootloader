@@ -11,51 +11,145 @@ CAN Bus Bootloader for Hercules™ Microcontrollers
 通信量を減らす工夫
 ●CAN経由でverify するのではなく　ローカル　でVerify して通信を半分にするアイディア
 
-
-
-
-
-
-
-
 ////////////////////////////////////////////
 ●マイクロチップ社
 
 MPLAB® Harmony 3 Bootloader Module
 
-
-
-
-
-
-
-
-
-
-
 ///////////////////////////////////////////////
 ●ST社
 
+AN3154
+CAN protocol used in the STM32 bootloader
+https://www.st.com/resource/en/application_note/cd00264321-can-protocol-used-in-the-stm32-bootloader-stmicroelectronics.pdf
+
+AN2606
+STM32 microcontroller system memory boot mode
+https://www.st.com/resource/en/application_note/cd00167594-stm32-microcontroller-system-memory-boot-mode-stmicroelectronics.pdf
+
+/////////////////////////////////////////////
+●NXP社
+
+AN4874 
+KE06 CAN Boot Loader Design
+https://www.nxp.com/docs/en/application-note/AN4874.pdf
 
 
 
+////////////////////////////
+OpenBLT
+
+OpenBLT 
+is 
+an open source bootloader 
+that can run on any microcontroller 
+and use any type of communication interface to perform software updates, 
+without the need of specialized debugger hardware. 
+
+
+https://www.feaser.com/openblt/doku.php?id=homepage
+
+///////////////////////////////
+arm KEIL
+https://www.keil.com/support/docs/3913.htm
+ARM: How to Write a Bootloader
+
+QUESTION
+How can I write a bootloader correctly?
+
+ANSWER
+A bootloader 
+is 
+a piece of code 
+which allows user application code 
+to be updated. 
+
+The new code 
+can be obtained 
+using alternative download channels, 
+such as a USB stick 
+or a network port. 
+
+After the boot ROM’s execution, 
+the bootloader 
+is executed 
+and will do the update 
+when required 
+and then execute the end-user application.
+
+The bootloader 
+and the user application 
+should be written 
+and built 
+as two separate µVision projects 
+or 
+targets, 
+resulting in two separate 
+and executable images/applications. 
+
+The main tasks of the bootloader 
+are 
+to reprogram/replace 
+the user application, 
+if necessary, 
+and to jump to the user application 
+to execute it. 
+
+The user application 
+doesn't necessarily 
+need to know the existence of the bootloader.
+
+The bootloader 
+is usually placed 
+at the chips flash base address, 
+so that it will be executed 
+by the CPU after reset. 
+
+The following figure 
+demonstrates 
+a typical code placement 
+of the user application 
+and the bootloader.
 
 
 
+There are 
+many ways to direct the bootloader 
+to enter programming mode 
+to reprogram the user application 
+into flash, 
+or to simply jump to the existing user application to execute. 
 
+The easiest way 
+to do this 
+is 
+to check a GPIO pin 
+to determine 
+if it should enter into programming mode or not.
 
+Most chip vendors provide users 
+with a convenient way, 
+such as In-System Programming (ISP) 
+and In-Application Programming (IAP) interfaces, 
+to be used 
+by the bootloader 
+to update the flash contents.
 
+When the flash content 
+was updated 
+or 
+is already up-to-date, 
+the bootloader jumps to the user application. 
 
+This requires 
+a number of steps before the user application 
+can be executed. T
 
-
-
-
-
-
-
-
-
-
+his is usually 
+done by calling a function 
+such as the example below, 
+BootJump(), 
+which has the aim to basically restore reset conditions for the user application:
 
 
 
