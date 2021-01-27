@@ -143,9 +143,9 @@ the bootloader jumps to the user application.
 
 This requires 
 a number of steps before the user application 
-can be executed. T
+can be executed. 
 
-his is usually 
+This is usually 
 done by calling a function 
 such as the example below, 
 BootJump(), 
