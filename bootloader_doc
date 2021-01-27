@@ -16,6 +16,27 @@ CAN Bus Bootloader for Hercules™ Microcontrollers
 
 MPLAB® Harmony 3 Bootloader Module
 
+リンカー参考
+XC32 Assembler, Linker and Utilities User’s Guide
+DS50002186A
+
+MPLAB X IDE - Generating LST file - XC32 Compiler
+Article URL
+https://microchipsupport.force.com/s/article/MPLAB-X-IDE---Generating-LST-file---XC32-Compiler
+
+From Project Properties -> Building, 
+select the checkbox 
+"Execute this line after build", 
+and add the following line 
+to the post build command:
+
+${MP_CC_DIR}\xc32-objdump -S ${ImageDir}\${PROJECTNAME}.${IMAGE_TYPE}.elf > list.lst
+
+Save and build the project. 
+LST file will be generated 
+in the respective <project>.X folder
+
+
 ///////////////////////////////////////////////
 ●ST社
 
