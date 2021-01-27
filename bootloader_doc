@@ -20,6 +20,12 @@ MPLAB® Harmony 3 Bootloader Module
 XC32 Assembler, Linker and Utilities User’s Guide
 DS50002186A
 
+リンカースクリプトについて
+Chapter 8. Linker Scripts
+
+
+
+リストファイルの生成について
 MPLAB X IDE - Generating LST file - XC32 Compiler
 Article URL
 https://microchipsupport.force.com/s/article/MPLAB-X-IDE---Generating-LST-file---XC32-Compiler
