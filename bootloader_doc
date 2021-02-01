@@ -14,6 +14,12 @@ CAN Bus Bootloader for Hercules™ Microcontrollers
 ////////////////////////////////////////////
 ●マイクロチップ社
 
+DS60001479G
+SAM C20/C21 Family Data Sheet
+ 32-bit Arm Cortex-M0+ with 5V Support, CAN-FD, PTC, and Advanced Analog
+
+
+
 MPLAB® Harmony 3 Bootloader Module
 
 Cコンパイラについて
