@@ -14,6 +14,9 @@ CAN Bus Bootloader for Hercules™ Microcontrollers
 ////////////////////////////////////////////
 ●マイクロチップ社
 
+A CAN Bootloader for PIC18F CAN Microcontrollers
+AN247
+
 DS60001479G
 SAM C20/C21 Family Data Sheet
  32-bit Arm Cortex-M0+ with 5V Support, CAN-FD, PTC, and Advanced Analog
